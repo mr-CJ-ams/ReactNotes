@@ -6,6 +6,7 @@ import { Contact } from "./pages/Contact";
 import { Navbar } from "./Navbar";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
+
 function App() {
   const client = new QueryClient({
     defaultOptions: {
@@ -14,6 +15,8 @@ function App() {
       },
     },
   });
+
+
   return (
     <div className="App">
       <QueryClientProvider client={client}>
@@ -30,5 +33,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;

@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import Axios from "axios";
 
+
 export const Home = () => {
   const {
     data: catData,
@@ -14,14 +15,17 @@ export const Home = () => {
     },
   });
 
+
   if (isError) {
     return <h1> Sorry, there was an error </h1>;
   }
+
 
   if (isLoading) {
     return <h1> Loading...</h1>;
   }
 
+  
   return (
     <h1>
       This is the home page <p>{catData?.fact}</p>
